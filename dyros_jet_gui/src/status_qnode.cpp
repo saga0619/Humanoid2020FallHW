@@ -16,8 +16,8 @@
 #include <std_msgs/String.h>
 #include <sstream>
 #include "dyros_jet_gui/status_qnode.hpp"
-#include "rt_dynamixel_msgs/ModeSetting.h"
-#include "rt_dynamixel_msgs/MotorSetting.h"
+// #include "rt_dynamixel_msgs/ModeSetting.h"
+// #include "rt_dynamixel_msgs/MotorSetting.h"
 
 /*****************************************************************************
 ** Namespaces
@@ -62,8 +62,8 @@ void StatusQNode::init_nh()
   nh = new ros::NodeHandle("dyros_jet_ui"); // allocate node handle
   // Add your ros communications here.
 
-  dxl_mode_set_client_ = nh->serviceClient<rt_dynamixel_msgs::ModeSetting>("/rt_dynamixel/mode");
-  dxl_motor_set_client_ = nh->serviceClient<rt_dynamixel_msgs::MotorSetting>("/rt_dynamixel/motor_set");
+  // dxl_mode_set_client_ = nh->serviceClient<rt_dynamixel_msgs::ModeSetting>("/rt_dynamixel/mode");
+  // dxl_motor_set_client_ = nh->serviceClient<rt_dynamixel_msgs::MotorSetting>("/rt_dynamixel/motor_set");
 
   shutdown_publisher = nh->advertise<std_msgs::String>("/dyros_jet/shutdown_command", 1);
   smach_publisher = nh->advertise<std_msgs::String>("/dyros_jet/smach/transition", 5);
@@ -99,36 +99,36 @@ void StatusQNode::run() {
 
 void StatusQNode::changeDxlMode(int mode)
 {
-  rt_dynamixel_msgs::ModeSettingRequest req;
-  rt_dynamixel_msgs::ModeSettingResponse res;
+  // rt_dynamixel_msgs::ModeSettingRequest req;
+  // rt_dynamixel_msgs::ModeSettingResponse res;
 
-  req.mode = mode;
+  // req.mode = mode;
 
-  dxl_mode_set_client_.call(req,res);
+  // dxl_mode_set_client_.call(req,res);
 }
 
 void StatusQNode::setAimPosition(int id, double radian)
 {
-  rt_dynamixel_msgs::MotorSettingRequest req;
-  rt_dynamixel_msgs::MotorSettingResponse res;
+  // rt_dynamixel_msgs::MotorSettingRequest req;
+  // rt_dynamixel_msgs::MotorSettingResponse res;
 
-  req.mode=rt_dynamixel_msgs::MotorSettingRequest::SET_GOAL_POSITION;
-  req.id = id;
-  req.fvalue = radian;
+  // req.mode=rt_dynamixel_msgs::MotorSettingRequest::SET_GOAL_POSITION;
+  // req.id = id;
+  // req.fvalue = radian;
 
-  dxl_motor_set_client_.call(req,res);
+  // dxl_motor_set_client_.call(req,res);
 }
 
 void StatusQNode::setTorque(int value)
 {
 
-  rt_dynamixel_msgs::MotorSettingRequest req;
-  rt_dynamixel_msgs::MotorSettingResponse res;
+  // rt_dynamixel_msgs::MotorSettingRequest req;
+  // rt_dynamixel_msgs::MotorSettingResponse res;
 
-  req.mode=rt_dynamixel_msgs::MotorSettingRequest::SET_TORQUE_ENABLE;
-  req.value = value;
+  // req.mode=rt_dynamixel_msgs::MotorSettingRequest::SET_TORQUE_ENABLE;
+  // req.value = value;
 
-  dxl_motor_set_client_.call(req,res);
+  // dxl_motor_set_client_.call(req,res);
 
 }
 

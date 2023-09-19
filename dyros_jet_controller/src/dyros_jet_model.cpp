@@ -324,13 +324,13 @@ void DyrosJetModel::getCenterOfMassPosition(Eigen::Vector3d* position)
 {
   RigidBodyDynamics::Math::Vector3d position_temp,position_dot;
   position_temp.setZero();
-  Eigen::Matrix<double, 34, 1> qddot;
-  qddot.setZero();
   //Eigen::Vector3d com_vel;
   //Eigen::Vector3d angular_momentum;
   double mass;
 
-  RigidBodyDynamics::Utils::CalcCenterOfMass(model_, q_virtual_, q_virtual_dot_, mass, position_temp, &position_dot, NULL, false);
+  Eigen::VectorXd qddot_zero(34);
+
+  RigidBodyDynamics::Utils::CalcCenterOfMass(model_, q_virtual_, q_virtual_dot_, &qddot_zero, mass, position_temp, &position_dot, NULL, NULL, NULL, false);
   //RigidBodyDynamics::Utils::CalcCenterOfMass(model_, q_, qdot, mass, position_temp, NULL, NULL, false);
 
   //RigidBodyDynamics::Utils::CalcCenterOfMass(model_, q_, qdot, mass, position_temp);
@@ -342,13 +342,12 @@ void DyrosJetModel::getCenterOfMassPositionDot(Eigen::Vector3d* position)
 {
   RigidBodyDynamics::Math::Vector3d position_temp, position_dot;
   position_temp.setZero();
-  Eigen::Matrix<double, 34, 1> qddot;
-  qddot.setZero();
+  Eigen::VectorXd qddot_zero(34);
   //Eigen::Vector3d com_vel;
   //Eigen::Vector3d angular_momentum;
   double mass;
 
-  RigidBodyDynamics::Utils::CalcCenterOfMass(model_, q_virtual_, q_virtual_dot_, mass, position_temp, &position_dot, NULL,false);
+  RigidBodyDynamics::Utils::CalcCenterOfMass(model_, q_virtual_, q_virtual_dot_, &qddot_zero, mass, position_temp, &position_dot, NULL, NULL, NULL, false);
   //RigidBodyDynamics::Utils::CalcCenterOfMass(model_, q_, qdot, mass, position_temp, NULL, NULL, false);
 
   //RigidBodyDynamics::Utils::CalcCenterOfMass(model_, q_, qdot, mass, position_temp);

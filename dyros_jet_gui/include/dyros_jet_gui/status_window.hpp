@@ -12,9 +12,9 @@
 ** Includes
 *****************************************************************************/
 #ifndef Q_MOC_RUN
-#include <QtGui/QMainWindow>
+#include <QtWidgets/QMainWindow>
 #include <vector>
-#include "ui_status_window.h"
+#include "dyros_jet_gui/ui_status_window.h"
 #include "status_qnode.hpp"
 #include <QPushButton>
 #include <QVarLengthArray>

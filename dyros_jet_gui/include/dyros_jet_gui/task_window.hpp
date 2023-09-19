@@ -12,10 +12,10 @@
 ** Includes
 *****************************************************************************/
 #ifndef Q_MOC_RUN
-#include <QtGui/QMainWindow>
+#include <QtWidgets/QMainWindow>
 #include <qapplication.h>
 #include <vector>
-#include "ui_task_window.h"
+#include "dyros_jet_gui/ui_task_window.h"
 #include "task_qnode.hpp"
 #include <QPushButton>
 #include <QVarLengthArray>

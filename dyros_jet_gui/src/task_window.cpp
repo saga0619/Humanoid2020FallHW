@@ -1049,9 +1049,9 @@ void TaskWindow::UpdateGraph()
 
   for(int i=0;i<6;i++){
     FT_RF->graph(i)->data()->removeBefore(time - 30);
-    FT_LF->graph(i)->data()->removeBefore(time-30);
-    FT_LF->graph(i)->setVisible(FALSE);
-    FT_RF->graph(i)->setVisible(FALSE);
+    FT_LF->graph(i)->data()->removeBefore(time - 30);
+    FT_LF->graph(i)->setVisible(true);
+    FT_RF->graph(i)->setVisible(true);
   }
 
 
@@ -1060,22 +1060,22 @@ void TaskWindow::UpdateGraph()
 
 
   if(LF_select=="LF_Force_X"){
-    FT_LF->graph(0)->setVisible(TRUE);
+    FT_LF->graph(0)->setVisible(true);
   }
   else if(LF_select =="LF_Force_Y"){
-    FT_LF->graph(1)->setVisible(TRUE);
+    FT_LF->graph(1)->setVisible(true);
   }
   else if(LF_select =="LF_Force_Z"){
-    FT_LF->graph(2)->setVisible(TRUE);
+    FT_LF->graph(2)->setVisible(true);
   }
   else if(LF_select =="LF_Torque_X"){
-    FT_LF->graph(3)->setVisible(TRUE);
+    FT_LF->graph(3)->setVisible(true);
   }
   else if(LF_select =="LF_Torque_Y"){
-    FT_LF->graph(4)->setVisible(TRUE);
+    FT_LF->graph(4)->setVisible(true);
   }
   else if(LF_select =="LF_Torque_Z"){
-    FT_LF->graph(5)->setVisible(TRUE);
+    FT_LF->graph(5)->setVisible(true);
   }
   else {
   ROS_ERROR("ERROR AT LF Source Selection");
@@ -1083,22 +1083,22 @@ void TaskWindow::UpdateGraph()
 
 
   if(RF_select=="RF_Force_X"){
-    FT_RF->graph(0)->setVisible(TRUE);
+    FT_RF->graph(0)->setVisible(true);
   }
   else if(RF_select =="RF_Force_Y"){
-    FT_RF->graph(1)->setVisible(TRUE);
+    FT_RF->graph(1)->setVisible(true);
   }
   else if(RF_select =="RF_Force_Z"){
-    FT_RF->graph(2)->setVisible(TRUE);
+    FT_RF->graph(2)->setVisible(true);
   }
   else if(RF_select =="RF_Torque_X"){
-    FT_RF->graph(3)->setVisible(TRUE);
+    FT_RF->graph(3)->setVisible(true);
   }
   else if(RF_select =="RF_Torque_Y"){
-    FT_RF->graph(4)->setVisible(TRUE);
+    FT_RF->graph(4)->setVisible(true);
   }
   else if(RF_select =="RF_Torque_Z"){
-    FT_RF->graph(5)->setVisible(TRUE);
+    FT_RF->graph(5)->setVisible(true);
   }
   else {
   ROS_ERROR("ERROR AT RF Source Selection");

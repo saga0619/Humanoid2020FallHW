@@ -6,8 +6,6 @@ add_compile_options(-std=c++11)
 
 find_package(catkin REQUIRED COMPONENTS
     dyros_jet_msgs
-    imu_3dm_gx4
-    rt_dynamixel_msgs
     geometry_msgs
     roscpp
     roslib
@@ -15,17 +13,20 @@ find_package(catkin REQUIRED COMPONENTS
     std_msgs
     realtime_tools
     eigen_conversions
+    mujoco_ros_msgs
+    mujoco_ros
     actionlib
     )
 find_package(Eigen3 REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system thread)
+find_package(RBDL REQUIRED)
 
 #find_package(boost REQUIRED)
 catkin_package(
-    DEPENDS   dyros_jet_msgs imu_3dm_gx4 rt_dynamixel_msgs geometry_msgs roscpp sensor_msgs std_msgs realtime_tools eigen_conversions
+    DEPENDS   dyros_jet_msgs geometry_msgs roscpp sensor_msgs std_msgs realtime_tools eigen_conversions
     CATKIN_DEPENDS # TODO
     INCLUDE_DIRS include
-    LIBRARIES # TODO
+    LIBRARIES qpOASES# TODO
     )
 include_directories(
     include
@@ -47,7 +48,7 @@ file(GLOB CVXGEN_SRC
     )
 
 file(GLOB BRIDGE_SRC
-    "src/real_robot_interface.cpp"
+    # "src/real_robot_interface.cpp"
     "src/simulation_interface.cpp" 
     "src/mujoco_interface.cpp"
     "src/control_base.cpp"
@@ -81,12 +82,9 @@ add_executable(dyros_jet_controller src/dyros_jet_controller.cpp)
 target_link_libraries(dyros_jet_controller_lib
     ${catkin_LIBRARIES}
     ${Boost_LIBRARIES}
-
-    -L/usr/local/lib
-    -lrbdl
-    -lrbdl_urdfreader
-
-    -lqpOASES
+    ${RBDL_LIBRARY}
+    ${RBDL_URDFREADER_LIBRARY}
+    ${QPLIB}
     )
 target_link_libraries(dyros_jet_controller
     dyros_jet_controller_lib
