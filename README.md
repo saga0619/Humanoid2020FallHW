@@ -1,7 +1,7 @@
 # DYROS JET Repository 
 
 * This is a DYROS JET Humanoid Repository FOR Ubuntu 20.04
-* Remove real-robot components.
+* Remove real-robot components. (imu & dynamixel..)
 * Remove v-rep components.
 * Migrate qt4 to qt5 for GUI
 
