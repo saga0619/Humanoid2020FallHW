@@ -13,8 +13,6 @@ find_package(catkin REQUIRED COMPONENTS
     std_msgs
     realtime_tools
     eigen_conversions
-    mujoco_ros_msgs
-    mujoco_ros
     actionlib
     )
 find_package(Eigen3 REQUIRED)
@@ -23,7 +21,7 @@ find_package(RBDL REQUIRED)
 
 #find_package(boost REQUIRED)
 catkin_package(
-    DEPENDS   dyros_jet_msgs geometry_msgs roscpp sensor_msgs std_msgs realtime_tools eigen_conversions
+    DEPENDS   dyros_jet_msgs geometry_msgs roscpp sensor_msgs std_msgs realtime_tools eigen_conversions mujoco_ros_msgs mujoco_ros
     CATKIN_DEPENDS # TODO
     INCLUDE_DIRS include
     LIBRARIES qpOASES# TODO

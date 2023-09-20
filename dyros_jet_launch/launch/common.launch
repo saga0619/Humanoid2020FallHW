@@ -1,8 +1,8 @@
 <launch>
   <arg name="run_mode" />
-  <node name="dyros_jet_smach" pkg="dyros_jet_smach" type="mini_drc_mission_toplevel.py" respawn="false" output="screen">
+  <!-- <node name="dyros_jet_smach" pkg="dyros_jet_smach" type="mini_drc_mission_toplevel.py" respawn="false" output="screen">
     <param name="run_mode" type="string" value="$(arg run_mode)" />
-  </node>
+  </node> -->
   <node name="dyros_jet_controller" pkg="dyros_jet_controller" type="dyros_jet_controller" required="true" respawn="false" output="screen">
     <param name="run_mode" type="string" value="$(arg run_mode)" />
   </node>
