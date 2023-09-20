@@ -19,6 +19,17 @@ sudo apt-get install ros-noetic-realtime-tools qtbase5-private-dev
 git clone --recursive https://github.com/saga0619/rbdl-orb
 mkdir build
 cd build
+cmake ..
+make all
+sudo make install
+```
+
+* 2. Install QPoases
+```sh
+git clone --recursive https://github.com/saga0619/qpoases
+mkdir build
+cd build
+cmake ..
 make all
 sudo make install
 ```
