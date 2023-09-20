@@ -12,7 +12,7 @@ git clone https://github.com/saga0619/mujoco_ros_sim.git
 
 ### RBDL Setup ###
 ```sh
-git clone --recursive https://github.com/ORB-HD/rbdl-orb
+git clone --recursive https://github.com/saga0619/rbdl-orb
 mkdir build
 cd build
 make all
