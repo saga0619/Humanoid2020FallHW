@@ -13,7 +13,8 @@
 ```sh
 sudo apt-get install ros-noetic-realtime-tools qtbase5-private-dev
 ```
-* 3. Install RBDL
+
+* 2. Install RBDL (urdfreader is installed with default on this repo)
 ```sh
 git clone --recursive https://github.com/saga0619/rbdl-orb
 mkdir build
@@ -22,18 +23,22 @@ make all
 sudo make install
 ```
  
-* 4. Clone mujoco_ros_sim
+* 3. Clone mujoco_ros_sim
 ```sh
 cd ~/catkin_ws/src
 git clone https://github.com/saga0619/mujoco_ros_sim.git
 ```
-* 5. Compile HumanoidJET project
+* 4. Clone HumanoidJET project
 ```sh
+cd ~/catkin_ws/src
 git clone https://github.com/saga0619/HumanoidJETLecture.git
 ```
 
-
-### RBDL Setup ###
+* 5. Compile ros project
+```sh
+cd ~/catkin_ws
+catkin_make (or catkin build)
+```
 
 
 ### How do I run the simulation? ###
