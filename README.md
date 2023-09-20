@@ -7,13 +7,13 @@
 
 ## How do I get set up? ##
 
-```sh
-sudo apt-get install ros-noetic-realtime-tools 
-cd ~/catkin_ws/src
-git clone https://github.com/saga0619/mujoco_ros_sim.git
-```
 
-### RBDL Setup ###
+
+* 1. Install ros-noetic-realtime-tools and qtbase5-private-dev
+```sh
+sudo apt-get install ros-noetic-realtime-tools qtbase5-private-dev
+```
+* 3. Install RBDL
 ```sh
 git clone --recursive https://github.com/saga0619/rbdl-orb
 mkdir build
@@ -21,6 +21,20 @@ cd build
 make all
 sudo make install
 ```
+ 
+* 4. Clone mujoco_ros_sim
+```sh
+cd ~/catkin_ws/src
+git clone https://github.com/saga0619/mujoco_ros_sim.git
+```
+* 5. Compile HumanoidJET project
+```sh
+git clone https://github.com/saga0619/HumanoidJETLecture.git
+```
+
+
+### RBDL Setup ###
+
 
 ### How do I run the simulation? ###
 ### Mujoco Update (19/01/31) ###
