@@ -16,11 +16,14 @@
 * 4. COMPILE cloned projects!!
 
 
-##### AUTOMATIC PREREQUISITIES INSTALLATION 
+##### INSTALLATION USING PREREQUISITIES INSTALLATION SCRIPT 
 ```sh
 cd ~/catkin_ws/src
 git clone https://github.com/saga0619/HumanoidJETLecture.git
+git clone https://github.com/saga0619/mujoco_ros_sim.git
 sudo ./HumanoidJetLecture/install_prereq.sh
+cd ~/catkin_ws
+catkin_make
 ```
 
 ##### COMPONENTS MANUAL INSTALLATION (if auto installation script now work)
