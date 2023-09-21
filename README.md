@@ -16,14 +16,14 @@
 * 4. COMPILE cloned projects!!
 
 
-### AUTOMATIC PREREQUISITIES INSTALLATION 
+##### AUTOMATIC PREREQUISITIES INSTALLATION 
 ```sh
 cd ~/catkin_ws/src
 git clone https://github.com/saga0619/HumanoidJETLecture.git
 sudo ./HumanoidJetLecture/install_prereq.sh
 ```
 
-### COMPONENTS MANUAL INSTALLATION (if auto installation script now work)
+##### COMPONENTS MANUAL INSTALLATION (if auto installation script now work)
 
 * 1. Install ros-noetic-realtime-tools and qtbase5-private-dev
 ```sh
