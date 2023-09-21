@@ -23,7 +23,8 @@ git clone https://github.com/saga0619/HumanoidJETLecture.git
 sudo ./HumanoidJetLecture/install_prereq.sh
 ```
 
-### COMPONENTS MANUAL INSTALLATION 
+### COMPONENTS MANUAL INSTALLATION (if auto installation script now work)
+
 * 1. Install ros-noetic-realtime-tools and qtbase5-private-dev
 ```sh
 sudo apt-get install ros-noetic-realtime-tools qtbase5-private-dev
