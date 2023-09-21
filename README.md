@@ -4,8 +4,17 @@
 * Remove real-robot components. (imu & dynamixel..)
 * Remove v-rep components.
 * Migrate qt4 to qt5 for GUI
+* ROS NOETIC
+
+
 
 ## How do I get set up? ##
+
+* 1. CLONE [mujoco_ros_sim](https://github.com/saga0619/mujoco_ros_sim) to your catkin_ws/src
+* 2. CLONE [HumanoidJetLecture](https://github.com/saga0619/HumanoidJetLecture) to your catkin_ws/src
+* 3. RUN install_prereq.sh in this repo.
+* 4. COMPILE cloned projects!!
+
 
 ### AUTOMATIC PREREQUISITIES INSTALLATION 
 ```sh
