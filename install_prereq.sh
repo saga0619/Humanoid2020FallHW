@@ -20,7 +20,7 @@ while true; do
               mkdir Temp
               cd Temp
 
-              git clone https://github.com/saga0619/rbdl-orb
+              git clone --recursive https://github.com/saga0619/rbdl-orb
               cd rbdl-orb
               mkdir build
               cd build
@@ -43,7 +43,7 @@ while true; do
         [1]* ) echo "Starting Install ... RBDL";
               mkdir Temp
               cd Temp
-              git clone https://github.com/saga0619/rbdl-orb
+              git clone --recursive https://github.com/saga0619/rbdl-orb
               cd rbdl-orb
               mkdir build
               cd build
