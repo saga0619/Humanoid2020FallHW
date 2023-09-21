@@ -39,6 +39,7 @@ sudo make install
 cd ~/catkin_ws/src
 git clone https://github.com/saga0619/mujoco_ros_sim.git
 ```
+
 * 4. Clone HumanoidJET project
 ```sh
 cd ~/catkin_ws/src
@@ -56,13 +57,19 @@ catkin_make (or catkin build)
 ### Mujoco Update (19/01/31) ###
 * mujoco_ros - [MUJOCO_ROS_SIM](https://github.com/saga0619/mujoco_ros_sim)
 
-* GUI
+* launch GUI only
 ```sh
 rosrun dyros_jet_gui dyros_jet_gui
 ```
-* roslaunch
+
+* launch simulation only
 ```sh
-roslaunch dyros_jet_launch mujoco.launch
+roslaunch dyros_jet_launch mujoco.lanuch
+```
+
+* launch simulation and gui together
+```sh
+roslaunch dyros_jet_launch simulation.launch
 ```
 
 ### How do I contribuite to this repo? ###
