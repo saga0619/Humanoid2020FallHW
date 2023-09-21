@@ -15,6 +15,8 @@ while true; do
     read -p "Select Number : " yn
     case $yn in
         [0]* ) echo "Starting Install ... all prerequistes";
+              sudo apt-get update
+              sudo apt-get install ros-noetic-realtime-tools qtbase5-private-dev
               mkdir Temp
               cd Temp
 
